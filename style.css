@@ -1,0 +1,232 @@
+/* Pour pouvoir utiliser une hauteur (height) ou une hauteur minimale
+   (min-height) sur un bloc, il faut que son parent direct ait lui-même une
+   hauteur déterminée (donc toute valeur de height sauf "auto": hauteur en
+   pixels, em, autres unités...).
+   Si la hauteur du parent est en pourcentage, elle se réfère alors à la
+   hauteur du «grand-père», et ainsi de suite.
+   Pour pouvoir utiliser un "min-height: 100%" sur div#global, il nous faut:
+   - un parent (body) en "height: 100%";
+   - le parent de body également en "height: 100%". */
+   
+html, body {
+    height: 100%;
+}
+
+body {
+    color: #bfbfbf;
+    background: black;
+    font-family: 'Futura-Medium', 'Futura', 'Trebuchet MS', sans-serif;
+}
+
+blockquote {
+	background: #333534;
+}
+
+A {color: #0F9DE8; text-decoration:none;}
+
+div#global {
+    min-height: 100%;  /* Voir commentaire sur html et body plus haut */
+    background: #333534;
+    width: 70%;
+    margin: auto;	/* Permet de centrer la div */
+    text-align: justify;
+    padding: 5px 20px;
+}
+
+div#contenu { margin-bottom : 30px;}
+
+footer#piedPrincipal { font-size: 10px;text-align: center;color: white;}
+
+H1 { color: white;}
+H2 { color: white;}
+td {vertical-align:top;}
+
+div#technote {
+    min-height: 100%;  
+    background: #444645;
+    width: 90%;
+    margin: auto;	/* Permet de centrer la div */
+    text-align: justify;
+    padding: 5px 20px;
+}
+div#contenuTechnote {
+    min-height: 100%;  /* Voir commentaire sur html et body plus haut */
+    background: #555756;
+    width: 95%;
+    margin: auto;	/* Permet de centrer la div */
+    text-align: justify;
+    padding: 5px 20px;
+	border:1px solid #DDDDDD;
+}
+div#commentaires {
+    min-height: 100%;  /* Voir commentaire sur html et body plus haut */
+    background: #555756;
+    width: 95%;
+    margin: auto;	/* Permet de centrer la div */
+    text-align: justify;
+    padding: 5px 20px;
+	border:1px solid #DDDDDD;
+}
+
+.menu1 {font-size: 15px; }
+A.menu1 {color: #0F9DE8; text-decoration:none;}
+A.menu1:link {}
+A.menu1:visited {}
+A.menu1:hover {text-decoration:underline;}
+
+.menutd{background-color:#0F9DE8;}
+.menu {font-size: 15px; }
+A.menu {color: #FFFFFF; text-decoration:none;}
+A.menu:link {}
+A.menu:visited {}
+A.menu:hover {text-decoration:underline;}
+
+.titreColonne {font-size: 15px; font-weight: bold;}
+A.titreColonne {color: #0F9DE8; text-decoration:none;}
+A.titreColonne:link {}
+A.titreColonne:visited {}
+A.titreColonne:hover {text-decoration:underline;}
+
+.contenuCellule {font-size: 15px; }
+A.contenuCellule {color: #0F9DE8; text-decoration:none;}
+A.contenuCellule:link {}
+A.contenuCellule:visited {}
+A.contenuCellule:hover {text-decoration:underline;}
+
+.motClesListe {font-size: 13px; font-weight: normal; font-style: italic; }
+A.motClesListe {color: #0F9DE8; text-decoration:none;}
+A.motClesListe:link {}
+A.motClesListe:visited {}
+A.motClesListe:hover {text-decoration:underline;}
+
+.motCleTitre {font-size: 15px; font-weight: bold; font-style: normal; }
+A.motCleTitre {color: #0F9DE8; text-decoration:none;}
+A.motCleTitre:link {}
+A.motCleTitre:visited {}
+A.motCleTitre:hover {text-decoration:underline;}
+
+.motCleLien {font-size: 11px; font-weight: normal; font-style: italic; }
+A.motCleLien {color: #0F9DE8; text-decoration:none;}
+A.motCleLien:link {}
+A.motCleLien:visited {}
+A.motCleLien:hover {text-decoration:underline;}
+
+.auteurTechquestion {font-size: 15px; font-weight: bold; text-align:right;}
+A.auteurTechquestion {color: #0F9DE8; text-decoration:none;}
+A.auteurTechquestion:link {}
+A.auteurTechquestion:visited {}
+A.auteurTechquestion:hover {text-decoration:underline;}
+
+.dateCreationTechquestion {font-size: 15px; text-align:right;}
+A.dateCreationTechquestion {color: #0F9DE8; text-decoration:none;}
+A.dateCreationTechquestion:link {}
+A.dateCreationTechquestion:visited {}
+A.dateCreationTechquestion:hover {text-decoration:underline;}
+
+.motClesTechquestion {font-size: 13px; font-weight: normal; font-style: italic; }
+A.motClesTechquestion {color: #0F9DE8; text-decoration:none;}
+A.motClesTechquestion:link {}
+A.motClesTechquestion:visited {}
+A.motClesTechquestion:hover {text-decoration:underline;}
+
+.lienCommentaire {font-size: 15px; text-align:right;}
+A.lienCommentaire {color: #0F9DE8; text-decoration:none;}
+A.lienCommentaire:link {}
+A.lienCommentaire:visited {}
+A.lienCommentaire:hover {text-decoration:underline;}
+
+.auteurCommentaire {font-size: 15px; font-weight: bold; text-align:right;}
+A.auteurCommentaire {color: #0F9DE8; text-decoration:none;}
+A.auteurCommentaire:link {}
+A.auteurCommentaire:visited {}
+A.auteurCommentaire:hover {text-decoration:underline;}
+
+.dateCreationCommentaire {font-size: 15px; text-align:right;}
+A.dateCreationCommentaire {color: #0F9DE8; text-decoration:none;}
+A.dateCreationCommentaire:link {}
+A.dateCreationCommentaire:visited {}
+A.dateCreationCommentaire:hover {text-decoration:underline;}
+
+INPUT.inputConnexion {
+	background-color:#FFFFFF ;
+	font: 12px Arial, Helvetica; color: #373737; font-weight: normal;
+	border: 1px solid #CECECE;
+	padding: 1px;
+	width: 140px;
+	height: 16px;
+}
+
+.libelleForm {font-size: 15px; }
+A.libelleForm {color: #0F9DE8; text-decoration:none;}
+A.libelleForm:link {}
+A.libelleForm:visited {}
+A.libelleForm:hover {text-decoration:underline;}
+
+INPUT.inputInscription {
+	background-color:#FFFFFF ;
+	font: 15px Arial, Helvetica; color: #373737; font-weight: normal;
+	border: 1px solid #CECECE;
+	padding: 1px;
+	width: 300px;
+	height: 20px;
+}
+
+INPUT.inputMotCle {
+	background-color:#FFFFFF ;
+	font: 15px Arial, Helvetica; color: #373737; font-weight: normal;
+	border: 1px solid #CECECE;
+	padding: 1px;
+	width: 700px;
+	height: 20px;
+}
+
+SELECT.selectMotCle {
+	background-color:#FFFFFF ;
+	font: 15px Arial, Helvetica; color: #373737; font-weight: normal;
+	border: 1px solid #CECECE;
+	padding: 1px;
+	width: 700px;
+	height: 20px;
+}
+
+INPUT.inputTechquestion {
+	background-color:#FFFFFF ;
+	font: 15px Arial, Helvetica; color: #373737; font-weight: normal;
+	border: 1px solid #CECECE;
+	padding: 1px;
+	width: 700px;
+	height: 20px;
+}
+
+TEXTAREA.techquestion {
+	background-color:#FFFFFF ;
+	font: 12px Arial, Helvetica; color: #373737; font-weight: normal;
+	border: 1px solid #CECECE;
+	padding: 1px;
+	width: 700px;
+	height: 300px;
+}
+
+.recherche {font-size: 15px; }
+A.recherche {color: #0F9DE8; text-decoration:none;}
+A.recherche:link {}
+A.recherche:visited {}
+A.recherche:hover {text-decoration:underline;}
+
+INPUT.selectRecherche {
+	background-color:#FFFFFF ;
+	font: 12px Arial, Helvetica; color: #373737; font-weight: normal;
+	border: 1px solid #CECECE;
+	padding: 1px;
+	width: 140px;
+	height: 16px;
+}
+
+TEXTAREA.commentaire {
+	background-color:#FFFFFF ;
+	font: 12px Arial, Helvetica; color: #373737; font-weight: normal;
+	border: 1px solid #CECECE;
+	padding: 1px;
+	width: 80%;
+	height: 80px;
+}
